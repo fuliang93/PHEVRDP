@@ -155,30 +155,6 @@ def vrpSol_ini(data,localSearchTime):
         "Capacity",
         )
     
-    
-    
-        
-    
-    # #### Add Battery constraint. #####       
-    # def energy_callback(from_index, to_index):
-    #     """Returns the demand of the node."""
-    #     # Convert from routing variable Index to electricity NodeIndex.
-    #     from_node = manager.IndexToNode(from_index)
-    #     to_node = manager.IndexToNode(to_index)
-    #     return data["distance_matrix"][from_node][to_node] * data['electricity_coefficient'][from_node][to_node]
-
-    # electricity_callback_index = routing.RegisterTransitCallback(energy_callback)
-        
-    # routing.AddDimension(
-    #     electricity_callback_index,
-    #     0,
-    #     data["battery_capacity"],  # 
-    #     True,  # Don't force start cumul to zero.
-    #     "electricity_coefficient",
-    # )
-    
-    
-    
 
     # Setting first solution heuristic.
     search_parameters = pywrapcp.DefaultRoutingSearchParameters()
